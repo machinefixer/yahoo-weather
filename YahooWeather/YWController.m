@@ -128,6 +128,15 @@
          iconView.image = [UIImage imageNamed:[newCondition imageName]];
      }];
     
+    // 使用最新的数据整合 high 和 low 值
+    RAC(hiloLabel, text) = [[RACSignal combineLatest:@[
+                                                       RACObserve([YWManager sharedManager], currentCondition.tempHigh),
+                                                       RACObserve([YWManager sharedManager], currentCondition.tempLow)]
+                                              reduce:^(NSNumber *hi, NSNumber *low) {
+                                                  return [NSString stringWithFormat:@"%.0f° / %.0f°", hi.floatValue, low.floatValue];
+                                              }]
+                            deliverOn:RACScheduler.mainThreadScheduler];
+    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
