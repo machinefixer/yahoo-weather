@@ -50,6 +50,7 @@ static NSString * const baseRequestString = @"http://api.openweathermap.org/data
                                                       [subscriber sendNext:json];
                                                   } else {
                                                       [subscriber sendError:jsonError];
+                                                      NSLog(@"JSON ERROR!");
                                                   }
                                               } else {
                                                   [subscriber sendError:error];
@@ -89,7 +90,7 @@ static NSString * const baseRequestString = @"http://api.openweathermap.org/data
 {
     // 返回 10 条
     NSString *urlString = [NSString
-                           stringWithFormat:@"%@/forcast?lat=%f&lon=%f&units=metric&cnt=10&appid=%@",
+                           stringWithFormat:@"%@/forecast?lat=%f&lon=%f&units=metric&cnt=10&appid=%@",
                            baseRequestString,
                            coordinate.latitude,
                            coordinate.longitude,
@@ -116,7 +117,7 @@ static NSString * const baseRequestString = @"http://api.openweathermap.org/data
 {
     // 获取最近一周的天气
     NSString *urlString = [NSString
-                           stringWithFormat:@"%@/forcast/daily?lat=%f&lon=%f&units=metric&cnt=7&appid=%@",
+                           stringWithFormat:@"%@/forecast/daily?lat=%f&lon=%f&units=metric&cnt=7&appid=%@",
                            baseRequestString,
                            coordinate.latitude,
                            coordinate.longitude,

@@ -1,9 +1,9 @@
 PODS:
   - HexColors (2.2.1)
   - LBBlurredImage (0.2.2)
-  - Mantle (2.0.5):
-    - Mantle/extobjc (= 2.0.5)
-  - Mantle/extobjc (2.0.5)
+  - Mantle (1.3.1):
+    - Mantle/extobjc (= 1.3.1)
+  - Mantle/extobjc (1.3.1)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -17,7 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - LBBlurredImage
-  - Mantle
+  - Mantle (= 1.3.1)
   - ReactiveCocoa (= 2.5)
   - Reveal-iOS-SDK
   - TSMessages
@@ -25,7 +25,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   LBBlurredImage: 700634c17922bc2d22343118e7deb6a3ca12db43
-  Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
+  Mantle: a516570b84c3cefb34b02647a6588a087dddc490
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   Reveal-iOS-SDK: ceae964076cebe3efe63e5e9abe3152efce46aa8
   TSMessages: c8cc7b80f2a833af533872cd02010cac061532cc

@@ -60,9 +60,9 @@
 // 指定 Unix 时间转 NSDate 时间的方法
 + (NSValueTransformer *)dateJSONTransformer
 {
-    return [MTLValueTransformer transformerUsingForwardBlock:^(NSString *str, BOOL *success, NSError **error) {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
         return [NSDate dateWithTimeIntervalSince1970:str.floatValue];
-    } reverseBlock:^(NSDate *date, BOOL *success, NSError **error) {
+    } reverseBlock:^(NSDate *date) {
         return [NSString stringWithFormat:@"%f", [date timeIntervalSince1970]];
     }];
 }
@@ -78,12 +78,20 @@
 }
 
 // 指定 NSArray 转 NSString 的方法
-- (NSValueTransformer *)conditionDescriptionJSONTransformer {
-    return [MTLValueTransformer transformerUsingForwardBlock:^(NSArray *values, BOOL *success, NSError **error) {
++ (NSValueTransformer *)conditionDescriptionJSONTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSArray *values) {
         return [values firstObject];
-    } reverseBlock:^(NSString *str, BOOL *success, NSError **error) {
+    } reverseBlock:^(NSString *str) {
         return @[str];
     }];
+}
+
++ (NSValueTransformer *)conditionJSONTransformer {
+    return [self conditionDescriptionJSONTransformer];
+}
+
++ (NSValueTransformer *)iconJSONTransformer {
+    return [self conditionDescriptionJSONTransformer];
 }
 
 - (NSString *)imageName

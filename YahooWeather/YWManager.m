@@ -96,6 +96,7 @@
     return [[self.client fetchCurrentConditionForLocation:self.currentLocation.coordinate]
             doNext:^(YWCondition *condition) {
                 self.currentCondition = condition;
+                NSLog(@"天气状况: %@", self.currentCondition.condition);
             }];
 }
 

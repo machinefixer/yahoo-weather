@@ -118,6 +118,16 @@
     // 刷新地理位置
     [[YWManager sharedManager] findCurrentLocation];
     
+    // 更新视图
+    [[RACObserve([YWManager sharedManager], currentCondition)
+      deliverOn:RACScheduler.mainThreadScheduler]
+     subscribeNext:^(YWCondition *newCondition) {
+         temperatureLabel.text = [NSString stringWithFormat:@"%.0f°", newCondition.temperature.floatValue];
+         conditionLabel.text = [newCondition.condition capitalizedString];
+         cityLabel.text = [newCondition.locationName capitalizedString];
+         iconView.image = [UIImage imageNamed:[newCondition imageName]];
+     }];
+    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle

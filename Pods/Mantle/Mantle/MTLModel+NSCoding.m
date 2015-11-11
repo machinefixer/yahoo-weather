@@ -7,9 +7,10 @@
 //
 
 #import "MTLModel+NSCoding.h"
-#import <Mantle/EXTRuntimeExtensions.h>
-#import <Mantle/EXTScope.h>
+#import "EXTRuntimeExtensions.h"
+#import "EXTScope.h"
 #import "MTLReflection.h"
+#import <objc/runtime.h>
 
 // Used in archives to store the modelVersion of the archived instance.
 static NSString * const MTLModelVersionKey = @"MTLModelVersion";
@@ -128,25 +129,25 @@ static void verifyAllowedClassesByPropertyKey(Class modelClass) {
 
 	SEL selector = MTLSelectorWithCapitalizedKeyPattern("decode", key, "WithCoder:modelVersion:");
 	if ([self respondsToSelector:selector]) {
-		IMP imp = [self methodForSelector:selector];
-		id (*function)(id, SEL, NSCoder *, NSUInteger) = (__typeof__(function))imp;
-		id result = function(self, selector, coder, modelVersion);
-		
+		NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:selector]];
+		invocation.target = self;
+		invocation.selector = selector;
+		[invocation setArgument:&coder atIndex:2];
+		[invocation setArgument:&modelVersion atIndex:3];
+		[invocation invoke];
+
+		__unsafe_unretained id result = nil;
+		[invocation getReturnValue:&result];
 		return result;
 	}
 
-	@try {
-		if (coderRequiresSecureCoding(coder)) {
-			NSArray *allowedClasses = self.class.allowedSecureCodingClassesByPropertyKey[key];
-			NSAssert(allowedClasses != nil, @"No allowed classes specified for securely decoding key \"%@\" on %@", key, self.class);
-			
-			return [coder decodeObjectOfClasses:[NSSet setWithArray:allowedClasses] forKey:key];
-		} else {
-			return [coder decodeObjectForKey:key];
-		}
-	} @catch (NSException *ex) {
-		NSLog(@"*** Caught exception decoding value for key \"%@\" on class %@: %@", key, self.class, ex);
-		@throw ex;
+	if (coderRequiresSecureCoding(coder)) {
+		NSArray *allowedClasses = self.class.allowedSecureCodingClassesByPropertyKey[key];
+		NSAssert(allowedClasses != nil, @"No allowed classes specified for securely decoding key \"%@\" on %@", key, self.class);
+		
+		return [coder decodeObjectOfClasses:[NSSet setWithArray:allowedClasses] forKey:key];
+	} else {
+		return [coder decodeObjectForKey:key];
 	}
 }
 
@@ -211,29 +212,24 @@ static void verifyAllowedClassesByPropertyKey(Class modelClass) {
 
 	NSDictionary *encodingBehaviors = self.class.encodingBehaviorsByPropertyKey;
 	[self.dictionaryValue enumerateKeysAndObjectsUsingBlock:^(NSString *key, id value, BOOL *stop) {
-		@try {
-			// Skip nil values.
-			if ([value isEqual:NSNull.null]) return;
-			
-			switch ([encodingBehaviors[key] unsignedIntegerValue]) {
-					// This will also match a nil behavior.
-				case MTLModelEncodingBehaviorExcluded:
-					break;
-					
-				case MTLModelEncodingBehaviorUnconditional:
-					[coder encodeObject:value forKey:key];
-					break;
-					
-				case MTLModelEncodingBehaviorConditional:
-					[coder encodeConditionalObject:value forKey:key];
-					break;
-					
-				default:
-					NSAssert(NO, @"Unrecognized encoding behavior %@ on class %@ for key \"%@\"", self.class, encodingBehaviors[key], key);
-			}
-		} @catch (NSException *ex) {
-			NSLog(@"*** Caught exception encoding value for key \"%@\" on class %@: %@", key, self.class, ex);
-			@throw ex;
+		// Skip nil values.
+		if ([value isEqual:NSNull.null]) return;
+
+		switch ([encodingBehaviors[key] unsignedIntegerValue]) {
+			// This will also match a nil behavior.
+			case MTLModelEncodingBehaviorExcluded:
+				break;
+
+			case MTLModelEncodingBehaviorUnconditional:
+				[coder encodeObject:value forKey:key];
+				break;
+
+			case MTLModelEncodingBehaviorConditional:
+				[coder encodeConditionalObject:value forKey:key];
+				break;
+
+			default:
+				NSAssert(NO, @"Unrecognized encoding behavior %@ for key \"%@\"", encodingBehaviors[key], key);
 		}
 	}];
 }
