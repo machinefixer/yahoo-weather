@@ -18,6 +18,7 @@
 @property (nonatomic, readwrite, strong) NSArray *hourlyForecast;
 @property (nonatomic, readwrite, strong) NSArray *dailyForecast;
 
+// 额外属性
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, assign) BOOL isFirstUpdate;
 @property (nonatomic, strong) YWClient *client;

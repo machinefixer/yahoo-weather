@@ -5,6 +5,10 @@
 //  Created by Anderson on 15/11/9.
 //  Copyright © 2015年 Yuchen Zhan. All rights reserved.
 //
+//  TODO:
+//       1. 用 IB 重新构造视图
+//       2. 天气详情的 Section 都改为 UITableViewCell 来实现。
+//          Section 没法设置圆角和拖动排序
 
 #import "YWController.h"
 #import <LBBlurredImage/UIImageView+LBBlurredImage.h>
@@ -15,11 +19,26 @@
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, strong) UIImageView *blurredImageView;
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSDateFormatter *hourlyFormatter;
+@property (nonatomic, strong) NSDateFormatter *dailyFormatter;
 @property (nonatomic, assign) CGFloat screenHeight;
 
 @end
 
 @implementation YWController
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.hourlyFormatter = [[NSDateFormatter alloc] init];
+        self.hourlyFormatter.dateFormat = @"h a";
+        
+        self.dailyFormatter = [[NSDateFormatter alloc] init];
+        self.dailyFormatter.dateFormat = @"EEEE";
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -43,6 +62,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.separatorColor = [UIColor colorWithWhite:1 alpha:0.2];
+    self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.pagingEnabled = YES;
     [self.view addSubview:self.tableView];
     
@@ -137,6 +157,20 @@
                                               }]
                             deliverOn:RACScheduler.mainThreadScheduler];
     
+    // 更新 UITableView 中的数据并刷新
+    [[RACObserve([YWManager sharedManager], hourlyForecast)
+      deliverOn:RACScheduler.mainThreadScheduler]
+     subscribeNext:^(NSArray *newHourlyForecast) {
+         [self.tableView reloadData];
+     }];
+    
+    [[RACObserve([YWManager sharedManager], dailyForecast)
+      deliverOn:RACScheduler.mainThreadScheduler]
+     subscribeNext:^(NSArray *newDailyForecast) {
+         [self.tableView reloadData];
+     }];
+    
+    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -153,6 +187,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    switch(section) {
+        case 0:
+            // 只显示未来 12 小时的天气，外加一个 header cell
+            return MIN([[YWManager sharedManager].hourlyForecast count], 12) + 1;
+            break;
+            
+        case 1:
+            // 只显示未来 6 天的天气，外加一个 header cell
+            return MIN([[YWManager sharedManager].dailyForecast count], 6) + 1;
+            break;
+    }
     return 0;
 }
 
@@ -170,14 +215,52 @@
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.textColor = [UIColor whiteColor];
     
+    // 设置 UITableViewCell
+    switch(indexPath.section) {
+        case 0:
+            if (indexPath.row == 0) {
+                [self configureHeaderCell:cell title:@"预报"];
+            }
+            else {
+                YWCondition *weather = [YWManager sharedManager].hourlyForecast[indexPath.row - 1];
+                [self configureHourlyCell:cell weather:weather];
+                NSLog(@"row: %ld", (long)indexPath.row);
+            }
+            break;
+            
+        case 1:
+            if (indexPath.row == 0) {
+                [self configureHeaderCell:cell title:@"一周天气"];
+            }
+            else {
+                YWCondition *weather = [YWManager sharedManager].dailyForecast[indexPath.row - 1];
+                [self configureDailyCell:cell weather:weather];
+            }
+    }
+    
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
+// 设置行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 44;
+}
+
+// 设置 Section 间距
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 20;
+}
+
+// 设置 Section 空隙的颜色，否则会有一块白色在 Section 之间
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, 20)];
+    view.backgroundColor = [UIColor clearColor];
+    return view;
 }
 
 - (void)viewWillLayoutSubviews
@@ -185,9 +268,54 @@
     [super viewWillLayoutSubviews];
     
     CGRect bounds = self.view.bounds;
+    CGRect tableViewFrame = CGRectMake(self.view.bounds.origin.x + 10,
+                                       self.view.bounds.origin.y,
+                                       self.view.bounds.size.width - 20,
+                                       self.view.bounds.size.height);
     self.blurredImageView.frame = bounds;
     self.blurredImageView.frame = bounds;
-    self.tableView.frame = bounds;
+    self.tableView.frame = tableViewFrame;
+}
+
+// 滑动时逐渐模糊背景
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat height = scrollView.bounds.size.height;
+    CGFloat position = MAX(scrollView.contentOffset.y, 0.0);
+    CGFloat percent = MIN(position / height, 1.0);
+    
+    self.blurredImageView.alpha = percent;
+}
+
+#pragma mark - UITableViewCell Configuration
+- (void)configureHeaderCell:(UITableViewCell *)cell title:(NSString *)title
+{
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
+    cell.textLabel.text = title;
+    cell.detailTextLabel.text = @"";
+    cell.imageView.image = nil;
+}
+
+- (void)configureHourlyCell:(UITableViewCell *)cell weather:(YWCondition *)weather
+{
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
+    cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
+    
+    cell.textLabel.text = [self.hourlyFormatter stringFromDate:weather.date];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0f°", weather.temperature.floatValue];
+    cell.imageView.image = [UIImage imageNamed:[weather imageName]];
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+}
+- (void)configureDailyCell:(UITableViewCell *)cell weather:(YWCondition *)weather
+{
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
+    cell.detailTextLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
+    
+    cell.textLabel.text = [self.dailyFormatter stringFromDate:weather.date];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.0f° / %.0f°", weather.tempHigh.floatValue, weather.tempLow.floatValue];
+    
+    cell.imageView.image = [UIImage imageNamed:[weather imageName]];
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 @end

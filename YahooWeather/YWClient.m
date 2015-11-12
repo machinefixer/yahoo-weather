@@ -88,9 +88,9 @@ static NSString * const baseRequestString = @"http://api.openweathermap.org/data
 
 - (RACSignal *)fetchHourlyForecastForLocation:(CLLocationCoordinate2D)coordinate
 {
-    // 返回 10 条
+    // 返回 16 条
     NSString *urlString = [NSString
-                           stringWithFormat:@"%@/forecast?lat=%f&lon=%f&units=metric&cnt=10&appid=%@",
+                           stringWithFormat:@"%@/forecast?lat=%f&lon=%f&units=metric&cnt=16&appid=%@",
                            baseRequestString,
                            coordinate.latitude,
                            coordinate.longitude,
