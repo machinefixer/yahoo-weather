@@ -90,7 +90,7 @@
         self.currentLocation = location;
         [self.locationManager stopUpdatingLocation];
         
-        // 更新 CityName
+        // 更新 CityName, 通过 CLGeocoder 反向查询地理位置
         [geocoder reverseGeocodeLocation:self.currentLocation
                        completionHandler:^(NSArray *placemarks, NSError *erorr) {
                            CLPlacemark *placemark = [placemarks objectAtIndex:0];
