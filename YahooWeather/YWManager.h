@@ -17,6 +17,7 @@
 
 @property (nonatomic, readonly, strong) CLLocation *currentLocation;
 @property (nonatomic, readonly, strong) YWCondition *currentCondition;
+@property (nonatomic, readonly, strong) NSString *currentCityName;
 @property (nonatomic, readonly, strong) NSArray *hourlyForecast;
 @property (nonatomic, readonly, strong) NSArray *dailyForecast;
 

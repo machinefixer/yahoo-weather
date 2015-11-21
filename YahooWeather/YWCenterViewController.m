@@ -338,7 +338,6 @@
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
 }
 
-
 #pragma mark - UINavigation Button Target
 - (void)showLeftPanel
 {

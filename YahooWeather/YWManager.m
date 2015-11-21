@@ -15,6 +15,7 @@
 // 同样的但可读写的属性
 @property (nonatomic, readwrite, strong) YWCondition *currentCondition;
 @property (nonatomic, readwrite, strong) CLLocation *currentLocation;
+@property (nonatomic, readwrite, strong) NSString *currentCityName;
 @property (nonatomic, readwrite, strong) NSArray *hourlyForecast;
 @property (nonatomic, readwrite, strong) NSArray *dailyForecast;
 
@@ -83,10 +84,19 @@
     }
     
     CLLocation *location = [locations lastObject];
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     
     if (location.horizontalAccuracy > 0) {
         self.currentLocation = location;
         [self.locationManager stopUpdatingLocation];
+        
+        // 更新 CityName
+        [geocoder reverseGeocodeLocation:self.currentLocation
+                       completionHandler:^(NSArray *placemarks, NSError *erorr) {
+                           CLPlacemark *placemark = [placemarks objectAtIndex:0];
+                           NSLog(@"CityName: %@", placemark.locality);
+                           self.currentCityName = placemark.locality;
+                       }];
     }
 }
 

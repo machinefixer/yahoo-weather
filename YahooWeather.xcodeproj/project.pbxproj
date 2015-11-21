@@ -12,7 +12,6 @@
 		7194361F1BF0668100B9D921 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194361E1BF0668100B9D921 /* AppDelegate.m */; };
 		719436211BF0668100B9D921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719436201BF0668100B9D921 /* Assets.xcassets */; };
 		719436241BF0668100B9D921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 719436221BF0668100B9D921 /* LaunchScreen.storyboard */; };
-		7194362D1BF067ED00B9D921 /* YWController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194362C1BF067ED00B9D921 /* YWController.m */; };
 		7194364C1BF06ADF00B9D921 /* weather-broken.png in Resources */ = {isa = PBXBuildFile; fileRef = 719436321BF06ADF00B9D921 /* weather-broken.png */; };
 		7194364D1BF06ADF00B9D921 /* weather-broken@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 719436331BF06ADF00B9D921 /* weather-broken@2x.png */; };
 		7194364E1BF06ADF00B9D921 /* weather-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 719436341BF06ADF00B9D921 /* weather-clear.png */; };
@@ -44,6 +43,22 @@
 		719436791BF34E3900B9D921 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 719436761BF34E3900B9D921 /* bg.png */; };
 		7194367A1BF34E3900B9D921 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 719436771BF34E3900B9D921 /* bg@2x.png */; };
 		7194367B1BF34E3900B9D921 /* bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 719436781BF34E3900B9D921 /* bg@3x.png */; };
+		71C4C3D11C005406005C0B20 /* YWLeftPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C4C3CF1C005406005C0B20 /* YWLeftPanelViewController.m */; };
+		71C4C3D21C005406005C0B20 /* YWLeftPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C4C3D01C005406005C0B20 /* YWLeftPanelViewController.xib */; };
+		71C4C3D71C00549C005C0B20 /* YWCitySearchingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C4C3D51C00549C005C0B20 /* YWCitySearchingViewController.xib */; };
+		71C4C3DC1C0054D0005C0B20 /* YWLocationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C4C3DA1C0054D0005C0B20 /* YWLocationListViewController.xib */; };
+		71FBC1871C008E2D00A5E78D /* YWLocationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC1861C008E2D00A5E78D /* YWLocationListViewController.m */; };
+		71FBC18A1C008E4C00A5E78D /* YWCitySearchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC1891C008E4C00A5E78D /* YWCitySearchingViewController.m */; };
+		71FBC18D1C008E6100A5E78D /* YWSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC18C1C008E6100A5E78D /* YWSettingsViewController.m */; };
+		71FBC1901C008E8000A5E78D /* YWCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC18F1C008E8000A5E78D /* YWCenterViewController.m */; };
+		71FBC1921C00E20C00A5E78D /* YWWeatherInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC1911C00E20C00A5E78D /* YWWeatherInfoCell.xib */; };
+		71FBC1951C00F68100A5E78D /* YWWeatherInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC1941C00F68100A5E78D /* YWWeatherInfoCell.m */; };
+		71FBC1991C00F7A400A5E78D /* YWWindAndPressureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC1971C00F7A400A5E78D /* YWWindAndPressureCell.m */; };
+		71FBC19A1C00F7A400A5E78D /* YWWindAndPressureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC1981C00F7A400A5E78D /* YWWindAndPressureCell.xib */; };
+		71FBC1A11C01164800A5E78D /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC19F1C01164800A5E78D /* Menu@2x.png */; };
+		71FBC1A21C01164800A5E78D /* Menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC1A01C01164800A5E78D /* Menu@3x.png */; };
+		71FBC1A51C01190C00A5E78D /* Add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC1A31C01190C00A5E78D /* Add@2x.png */; };
+		71FBC1A61C01190C00A5E78D /* Add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC1A41C01190C00A5E78D /* Add@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,8 +70,6 @@
 		719436201BF0668100B9D921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719436231BF0668100B9D921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		719436251BF0668100B9D921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7194362B1BF067ED00B9D921 /* YWController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWController.h; sourceTree = "<group>"; };
-		7194362C1BF067ED00B9D921 /* YWController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWController.m; sourceTree = "<group>"; };
 		719436321BF06ADF00B9D921 /* weather-broken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-broken.png"; sourceTree = "<group>"; };
 		719436331BF06ADF00B9D921 /* weather-broken@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-broken@2x.png"; sourceTree = "<group>"; };
 		719436341BF06ADF00B9D921 /* weather-clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-clear.png"; sourceTree = "<group>"; };
@@ -92,6 +105,29 @@
 		719436761BF34E3900B9D921 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../bg.png; sourceTree = "<group>"; };
 		719436771BF34E3900B9D921 /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg@2x.png"; path = "../bg@2x.png"; sourceTree = "<group>"; };
 		719436781BF34E3900B9D921 /* bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg@3x.png"; path = "../bg@3x.png"; sourceTree = "<group>"; };
+		71C4C3CE1C005406005C0B20 /* YWLeftPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWLeftPanelViewController.h; sourceTree = "<group>"; };
+		71C4C3CF1C005406005C0B20 /* YWLeftPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWLeftPanelViewController.m; sourceTree = "<group>"; };
+		71C4C3D01C005406005C0B20 /* YWLeftPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWLeftPanelViewController.xib; sourceTree = "<group>"; };
+		71C4C3D51C00549C005C0B20 /* YWCitySearchingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWCitySearchingViewController.xib; sourceTree = "<group>"; };
+		71C4C3DA1C0054D0005C0B20 /* YWLocationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWLocationListViewController.xib; sourceTree = "<group>"; };
+		71FBC1851C008E2D00A5E78D /* YWLocationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWLocationListViewController.h; sourceTree = "<group>"; };
+		71FBC1861C008E2D00A5E78D /* YWLocationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWLocationListViewController.m; sourceTree = "<group>"; };
+		71FBC1881C008E4C00A5E78D /* YWCitySearchingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCitySearchingViewController.h; sourceTree = "<group>"; };
+		71FBC1891C008E4C00A5E78D /* YWCitySearchingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCitySearchingViewController.m; sourceTree = "<group>"; };
+		71FBC18B1C008E6100A5E78D /* YWSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWSettingsViewController.h; sourceTree = "<group>"; };
+		71FBC18C1C008E6100A5E78D /* YWSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWSettingsViewController.m; sourceTree = "<group>"; };
+		71FBC18E1C008E8000A5E78D /* YWCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCenterViewController.h; sourceTree = "<group>"; };
+		71FBC18F1C008E8000A5E78D /* YWCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCenterViewController.m; sourceTree = "<group>"; };
+		71FBC1911C00E20C00A5E78D /* YWWeatherInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWWeatherInfoCell.xib; sourceTree = "<group>"; };
+		71FBC1931C00F68100A5E78D /* YWWeatherInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWWeatherInfoCell.h; sourceTree = "<group>"; };
+		71FBC1941C00F68100A5E78D /* YWWeatherInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWWeatherInfoCell.m; sourceTree = "<group>"; };
+		71FBC1961C00F7A400A5E78D /* YWWindAndPressureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWWindAndPressureCell.h; sourceTree = "<group>"; };
+		71FBC1971C00F7A400A5E78D /* YWWindAndPressureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWWindAndPressureCell.m; sourceTree = "<group>"; };
+		71FBC1981C00F7A400A5E78D /* YWWindAndPressureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWWindAndPressureCell.xib; sourceTree = "<group>"; };
+		71FBC19F1C01164800A5E78D /* Menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@2x.png"; sourceTree = "<group>"; };
+		71FBC1A01C01164800A5E78D /* Menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@3x.png"; sourceTree = "<group>"; };
+		71FBC1A31C01190C00A5E78D /* Add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add@2x.png"; sourceTree = "<group>"; };
+		71FBC1A41C01190C00A5E78D /* Add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add@3x.png"; sourceTree = "<group>"; };
 		93D64F4DDCB23CFCEA0127B4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EFE0E258C76413BF96033385 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,20 +168,37 @@
 				7194361D1BF0668100B9D921 /* AppDelegate.h */,
 				7194361E1BF0668100B9D921 /* AppDelegate.m */,
 				719436201BF0668100B9D921 /* Assets.xcassets */,
-				719436221BF0668100B9D921 /* LaunchScreen.storyboard */,
+				71C4C3D51C00549C005C0B20 /* YWCitySearchingViewController.xib */,
+				71FBC1881C008E4C00A5E78D /* YWCitySearchingViewController.h */,
+				71FBC1891C008E4C00A5E78D /* YWCitySearchingViewController.m */,
+				71FBC18B1C008E6100A5E78D /* YWSettingsViewController.h */,
+				71FBC18C1C008E6100A5E78D /* YWSettingsViewController.m */,
+				71FBC18E1C008E8000A5E78D /* YWCenterViewController.h */,
+				71FBC18F1C008E8000A5E78D /* YWCenterViewController.m */,
+				7194362E1BF06ADF00B9D921 /* Images */,
 				719436251BF0668100B9D921 /* Info.plist */,
+				719436221BF0668100B9D921 /* LaunchScreen.storyboard */,
+				71C4C3DA1C0054D0005C0B20 /* YWLocationListViewController.xib */,
+				71FBC1851C008E2D00A5E78D /* YWLocationListViewController.h */,
+				71FBC1861C008E2D00A5E78D /* YWLocationListViewController.m */,
 				7194361A1BF0668100B9D921 /* Supporting Files */,
-				7194362B1BF067ED00B9D921 /* YWController.h */,
-				7194362C1BF067ED00B9D921 /* YWController.m */,
 				719436641BF0BC2900B9D921 /* YWClient.h */,
 				719436651BF0BC2900B9D921 /* YWClient.m */,
 				7194366A1BF0BC7700B9D921 /* YWCondition.h */,
 				7194366B1BF0BC7700B9D921 /* YWCondition.m */,
 				7194366D1BF0BCA000B9D921 /* YWDailyForecast.h */,
 				7194366E1BF0BCA000B9D921 /* YWDailyForecast.m */,
+				71C4C3CE1C005406005C0B20 /* YWLeftPanelViewController.h */,
+				71C4C3CF1C005406005C0B20 /* YWLeftPanelViewController.m */,
+				71C4C3D01C005406005C0B20 /* YWLeftPanelViewController.xib */,
 				719436671BF0BC5500B9D921 /* YWManager.h */,
 				719436681BF0BC5500B9D921 /* YWManager.m */,
-				7194362E1BF06ADF00B9D921 /* Images */,
+				71FBC1911C00E20C00A5E78D /* YWWeatherInfoCell.xib */,
+				71FBC1931C00F68100A5E78D /* YWWeatherInfoCell.h */,
+				71FBC1961C00F7A400A5E78D /* YWWindAndPressureCell.h */,
+				71FBC1971C00F7A400A5E78D /* YWWindAndPressureCell.m */,
+				71FBC1981C00F7A400A5E78D /* YWWindAndPressureCell.xib */,
+				71FBC1941C00F68100A5E78D /* YWWeatherInfoCell.m */,
 			);
 			path = YahooWeather;
 			sourceTree = "<group>";
@@ -161,6 +214,10 @@
 		7194362E1BF06ADF00B9D921 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				71FBC1A31C01190C00A5E78D /* Add@2x.png */,
+				71FBC1A41C01190C00A5E78D /* Add@3x.png */,
+				71FBC19F1C01164800A5E78D /* Menu@2x.png */,
+				71FBC1A01C01164800A5E78D /* Menu@3x.png */,
 				719436761BF34E3900B9D921 /* bg.png */,
 				719436771BF34E3900B9D921 /* bg@2x.png */,
 				719436781BF34E3900B9D921 /* bg@3x.png */,
@@ -280,17 +337,24 @@
 				719436631BF06ADF00B9D921 /* weather-tstorm@2x.png in Resources */,
 				7194364C1BF06ADF00B9D921 /* weather-broken.png in Resources */,
 				719436501BF06ADF00B9D921 /* weather-few-night.png in Resources */,
+				71C4C3DC1C0054D0005C0B20 /* YWLocationListViewController.xib in Resources */,
+				71FBC1A51C01190C00A5E78D /* Add@2x.png in Resources */,
+				71FBC1A61C01190C00A5E78D /* Add@3x.png in Resources */,
 				7194367A1BF34E3900B9D921 /* bg@2x.png in Resources */,
+				71C4C3D21C005406005C0B20 /* YWLeftPanelViewController.xib in Resources */,
 				7194364E1BF06ADF00B9D921 /* weather-clear.png in Resources */,
 				7194365D1BF06ADF00B9D921 /* weather-scattered@2x.png in Resources */,
 				7194365B1BF06ADF00B9D921 /* weather-rain@2x.png in Resources */,
 				719436511BF06ADF00B9D921 /* weather-few-night@2x.png in Resources */,
 				719436541BF06ADF00B9D921 /* weather-mist.png in Resources */,
 				719436601BF06ADF00B9D921 /* weather-snow.png in Resources */,
+				71C4C3D71C00549C005C0B20 /* YWCitySearchingViewController.xib in Resources */,
 				7194365A1BF06ADF00B9D921 /* weather-rain.png in Resources */,
 				719436581BF06ADF00B9D921 /* weather-rain-night.png in Resources */,
 				719436211BF0668100B9D921 /* Assets.xcassets in Resources */,
 				719436571BF06ADF00B9D921 /* weather-moon@2x.png in Resources */,
+				71FBC1921C00E20C00A5E78D /* YWWeatherInfoCell.xib in Resources */,
+				71FBC19A1C00F7A400A5E78D /* YWWindAndPressureCell.xib in Resources */,
 				719436551BF06ADF00B9D921 /* weather-mist@2x.png in Resources */,
 				719436621BF06ADF00B9D921 /* weather-tstorm.png in Resources */,
 				7194365E1BF06ADF00B9D921 /* weather-shower.png in Resources */,
@@ -305,6 +369,8 @@
 				7194364D1BF06ADF00B9D921 /* weather-broken@2x.png in Resources */,
 				719436241BF0668100B9D921 /* LaunchScreen.storyboard in Resources */,
 				7194365C1BF06ADF00B9D921 /* weather-scattered.png in Resources */,
+				71FBC1A11C01164800A5E78D /* Menu@2x.png in Resources */,
+				71FBC1A21C01164800A5E78D /* Menu@3x.png in Resources */,
 				7194364F1BF06ADF00B9D921 /* weather-clear@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,12 +430,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C4C3D11C005406005C0B20 /* YWLeftPanelViewController.m in Sources */,
+				71FBC1991C00F7A400A5E78D /* YWWindAndPressureCell.m in Sources */,
 				719436661BF0BC2900B9D921 /* YWClient.m in Sources */,
+				71FBC1951C00F68100A5E78D /* YWWeatherInfoCell.m in Sources */,
 				7194366C1BF0BC7700B9D921 /* YWCondition.m in Sources */,
+				71FBC1901C008E8000A5E78D /* YWCenterViewController.m in Sources */,
 				719436691BF0BC5500B9D921 /* YWManager.m in Sources */,
 				7194366F1BF0BCA000B9D921 /* YWDailyForecast.m in Sources */,
 				7194361F1BF0668100B9D921 /* AppDelegate.m in Sources */,
-				7194362D1BF067ED00B9D921 /* YWController.m in Sources */,
+				71FBC1871C008E2D00A5E78D /* YWLocationListViewController.m in Sources */,
+				71FBC18D1C008E6100A5E78D /* YWSettingsViewController.m in Sources */,
+				71FBC18A1C008E4C00A5E78D /* YWCitySearchingViewController.m in Sources */,
 				7194361C1BF0668100B9D921 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
