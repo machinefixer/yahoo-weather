@@ -1,20 +1,18 @@
 //
-//  YWController.m
+//  YWCenterViewController.m
 //  YahooWeather
 //
-//  Created by Anderson on 15/11/9.
+//  Created by Anderson on 15/11/21.
 //  Copyright © 2015年 Yuchen Zhan. All rights reserved.
 //
-//  TODO:
-//       1. 用 IB 重新构造视图
-//       2. 天气详情的 Section 都改为 UITableViewCell 来实现。
-//          Section 没法设置圆角和拖动排序
+//  TODO: 下拉刷新
+//  TODO: 根据城市请求对应的城市图片作为背景
 
-#import "YWController.h"
+#import "YWCenterViewController.h"
 #import <LBBlurredImage/UIImageView+LBBlurredImage.h>
 #import "YWManager.h"
 
-@interface YWController ()
+@interface YWCenterViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, strong) UIImageView *blurredImageView;
@@ -25,9 +23,9 @@
 
 @end
 
-@implementation YWController
+@implementation YWCenterViewController
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self) {
         self.hourlyFormatter = [[NSDateFormatter alloc] init];
@@ -35,6 +33,24 @@
         
         self.dailyFormatter = [[NSDateFormatter alloc] init];
         self.dailyFormatter.dateFormat = @"EEEE";
+        
+        // 设置 NavigationBar
+        UINavigationItem *navItem = self.navigationItem;
+        UIImage *menuButtonImage = [UIImage imageNamed:@"Menu"];
+        UIImage *addButtonImage = [UIImage imageNamed:@"Add"];
+        UIBarButtonItem *menuBarButtonItem = [[UIBarButtonItem alloc] initWithImage:menuButtonImage
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(showLeftPanel)];
+        UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithImage:addButtonImage
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(showCitySearchingView)];
+        menuBarButtonItem.tintColor = [UIColor whiteColor];
+        addBarButtonItem.tintColor = [UIColor whiteColor];
+        
+        navItem.leftBarButtonItem = menuBarButtonItem;
+        navItem.rightBarButtonItem = addBarButtonItem;
     }
     
     return self;
@@ -114,13 +130,13 @@
     [header addSubview:hiloLabel];
     
     // 城市标签
-    UILabel *cityLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 30)];
-    cityLabel.backgroundColor = [UIColor clearColor];
-    cityLabel.textColor = [UIColor whiteColor];
-    cityLabel.text = @"Loading...";
-    cityLabel.font = [UIFont fontWithName:@"HelveticaNeue-light" size:18];
-    cityLabel.textAlignment = NSTextAlignmentCenter;
-    [header addSubview:cityLabel];
+//    UILabel *cityLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 30)];
+//    cityLabel.backgroundColor = [UIColor clearColor];
+//    cityLabel.textColor = [UIColor whiteColor];
+//    cityLabel.text = @"Loading...";
+//    cityLabel.font = [UIFont fontWithName:@"HelveticaNeue-light" size:18];
+//    cityLabel.textAlignment = NSTextAlignmentCenter;
+//    [header addSubview:cityLabel];
     
     // 天气状况标签
     UILabel *conditionLabel = [[UILabel alloc] initWithFrame:conditionsFrame];
@@ -144,8 +160,14 @@
      subscribeNext:^(YWCondition *newCondition) {
          temperatureLabel.text = [NSString stringWithFormat:@"%.0f°", newCondition.temperature.floatValue];
          conditionLabel.text = [newCondition.condition capitalizedString];
-         cityLabel.text = [newCondition.locationName capitalizedString];
          iconView.image = [UIImage imageNamed:[newCondition imageName]];
+     }];
+    
+    // 更新 NavigationItem 标题
+    [[RACObserve([YWManager sharedManager], currentCityName)
+      deliverOn:RACScheduler.mainThreadScheduler]
+     subscribeNext:^(NSString *newCityName) {
+         self.navigationItem.title = newCityName;
      }];
     
     // 使用最新的数据整合 high 和 low 值
@@ -169,8 +191,6 @@
      subscribeNext:^(NSArray *newDailyForecast) {
          [self.tableView reloadData];
      }];
-    
-    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -317,5 +337,17 @@
     cell.imageView.image = [UIImage imageNamed:[weather imageName]];
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
 }
+
+
+#pragma mark - UINavigation Button Target
+- (void)showLeftPanel
+{
+}
+
+- (void)showCitySearchingView
+{
+}
+
+
 
 @end
