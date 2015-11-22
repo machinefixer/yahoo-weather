@@ -68,7 +68,7 @@
     
     self.blurredImageView = [[UIImageView alloc] init];
     self.blurredImageView.contentMode = UIViewContentModeScaleAspectFill;
-    // 模糊版本的背景图一开始为不可见
+    // 模糊遮罩层一开始为透明
     self.blurredImageView.alpha = 0;
     [self.blurredImageView setImageToBlur:background blurRadius:10 completionBlock:nil];
     [self.view addSubview:self.blurredImageView];

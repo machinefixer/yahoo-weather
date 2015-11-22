@@ -5,7 +5,6 @@
 ### Quick Start
 
 * Clone this repo
-* Edit `Podfile` and remove the `Reveal` related plugin if you want to save some time
 * Run `Pod install`
 * Get a cup of coffee or power on your Xbox and wait for its stupid updating
 * Add your [OpenWeatherMap API](http://openweathermap.org) to `YWClient.m`
