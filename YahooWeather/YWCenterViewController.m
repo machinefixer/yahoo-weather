@@ -41,11 +41,11 @@
         UIBarButtonItem *menuBarButtonItem = [[UIBarButtonItem alloc] initWithImage:menuButtonImage
                                                                               style:UIBarButtonItemStylePlain
                                                                              target:self
-                                                                             action:@selector(showLeftPanel)];
+                                                                             action:@selector(btnMovePanelRight)];
         UIBarButtonItem *addBarButtonItem = [[UIBarButtonItem alloc] initWithImage:addButtonImage
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
-                                                                            action:@selector(showCitySearchingView)];
+                                                                            action:@selector(btnShowCitySearchingView)];
         menuBarButtonItem.tintColor = [UIColor whiteColor];
         addBarButtonItem.tintColor = [UIColor whiteColor];
         
@@ -128,15 +128,6 @@
     hiloLabel.text = @"0° / 0°";
     hiloLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:28];
     [header addSubview:hiloLabel];
-    
-    // 城市标签
-//    UILabel *cityLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 30)];
-//    cityLabel.backgroundColor = [UIColor clearColor];
-//    cityLabel.textColor = [UIColor whiteColor];
-//    cityLabel.text = @"Loading...";
-//    cityLabel.font = [UIFont fontWithName:@"HelveticaNeue-light" size:18];
-//    cityLabel.textAlignment = NSTextAlignmentCenter;
-//    [header addSubview:cityLabel];
     
     // 天气状况标签
     UILabel *conditionLabel = [[UILabel alloc] initWithFrame:conditionsFrame];
@@ -338,12 +329,13 @@
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
 }
 
-#pragma mark - UINavigation Button Target
-- (void)showLeftPanel
+#pragma mark - UINavigation Button Action
+- (void)btnMovePanelRight
 {
+    [self.delegate movePanelRight];
 }
 
-- (void)showCitySearchingView
+- (void)btnShowCitySearchingView
 {
 }
 

@@ -11,7 +11,7 @@
 
 // API Key
 static NSString * const weatherAPIKey = @"";
-static NSString * const baseRequestString = @"http://api.openweathermap.org/data/2.5";
+static NSString * const baseRequestString = @"https://api.openweathermap.org/data/2.5";
 
 @interface YWClient ()
 

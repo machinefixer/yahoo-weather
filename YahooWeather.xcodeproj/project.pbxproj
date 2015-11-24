@@ -16,6 +16,7 @@
 		710A70F21C047D400059FB6F /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70F11C047D400059FB6F /* share.png */; };
 		710A70F41C047D9C0059FB6F /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70F31C047D9C0059FB6F /* star.png */; };
 		710A70F61C047F950059FB6F /* yahoo.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70F51C047F950059FB6F /* yahoo.png */; };
+		710A70F91C04858C0059FB6F /* YWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710A70F81C04858C0059FB6F /* YWMainViewController.m */; };
 		7194361C1BF0668100B9D921 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194361B1BF0668100B9D921 /* main.m */; };
 		7194361F1BF0668100B9D921 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194361E1BF0668100B9D921 /* AppDelegate.m */; };
 		719436211BF0668100B9D921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719436201BF0668100B9D921 /* Assets.xcassets */; };
@@ -78,6 +79,8 @@
 		710A70F11C047D400059FB6F /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		710A70F31C047D9C0059FB6F /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		710A70F51C047F950059FB6F /* yahoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yahoo.png; sourceTree = "<group>"; };
+		710A70F71C04858C0059FB6F /* YWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWMainViewController.h; sourceTree = "<group>"; };
+		710A70F81C04858C0059FB6F /* YWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWMainViewController.m; sourceTree = "<group>"; };
 		719436171BF0668100B9D921 /* YahooWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YahooWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7194361B1BF0668100B9D921 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7194361D1BF0668100B9D921 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				719436221BF0668100B9D921 /* LaunchScreen.storyboard */,
 				71C4C3DA1C0054D0005C0B20 /* YWLocationListViewController.xib */,
 				71FBC1851C008E2D00A5E78D /* YWLocationListViewController.h */,
+				710A70F71C04858C0059FB6F /* YWMainViewController.h */,
+				710A70F81C04858C0059FB6F /* YWMainViewController.m */,
 				71FBC1861C008E2D00A5E78D /* YWLocationListViewController.m */,
 				7194361A1BF0668100B9D921 /* Supporting Files */,
 				719436641BF0BC2900B9D921 /* YWClient.h */,
@@ -461,6 +466,7 @@
 				71C4C3D11C005406005C0B20 /* YWLeftPanelViewController.m in Sources */,
 				71FBC1991C00F7A400A5E78D /* YWWindAndPressureCell.m in Sources */,
 				719436661BF0BC2900B9D921 /* YWClient.m in Sources */,
+				710A70F91C04858C0059FB6F /* YWMainViewController.m in Sources */,
 				71FBC1951C00F68100A5E78D /* YWWeatherInfoCell.m in Sources */,
 				7194366C1BF0BC7700B9D921 /* YWCondition.m in Sources */,
 				71FBC1901C008E8000A5E78D /* YWCenterViewController.m in Sources */,

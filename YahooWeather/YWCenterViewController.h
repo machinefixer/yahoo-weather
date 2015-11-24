@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol YWCenterViewControllerDelegate <NSObject>
+
+@optional
+- (void)movePanelRight;
+
+@required
+- (void)movePanelToOriginalPosition;
+
+@end
+
 @interface YWCenterViewController : UIViewController
+
+@property (nonatomic, assign) id<YWCenterViewControllerDelegate> delegate;
 
 @end
