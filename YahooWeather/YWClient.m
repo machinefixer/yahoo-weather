@@ -61,6 +61,7 @@ static NSString * const baseRequestString = @"http://api.openweathermap.org/data
         
         [dataTask resume];
         
+        // 在 Subscription 被取消或清除时做一些清理操作
         return [RACDisposable disposableWithBlock:^{
             [dataTask cancel];
         }];

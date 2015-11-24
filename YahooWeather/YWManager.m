@@ -52,8 +52,9 @@
         [[[[RACObserve(self, currentLocation)
             ignore:nil]
            
-           // 同时订阅三个信号
+           // 让内部信号的事件传递到外部
            flattenMap:^(CLLocation *newLocation) {
+               // 合并三个信号
                return [RACSignal merge:@[
                                          [self updateCurrentConditions],
                                          [self updateDailyForecast],

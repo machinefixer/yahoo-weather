@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		09526124A898D05257CBFC5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE0E258C76413BF96033385 /* libPods.a */; };
+		710A70E21C0291270059FB6F /* YWLeftPanelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 710A70E11C0291270059FB6F /* YWLeftPanelViewController.storyboard */; };
+		710A70E81C0477210059FB6F /* location-add.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70E41C0477210059FB6F /* location-add.png */; };
+		710A70E91C0477210059FB6F /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70E51C0477210059FB6F /* location.png */; };
+		710A70EE1C047B6E0059FB6F /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70ED1C047B6E0059FB6F /* gear.png */; };
+		710A70F01C047CA00059FB6F /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70EF1C047CA00059FB6F /* chat.png */; };
+		710A70F21C047D400059FB6F /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70F11C047D400059FB6F /* share.png */; };
+		710A70F41C047D9C0059FB6F /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70F31C047D9C0059FB6F /* star.png */; };
+		710A70F61C047F950059FB6F /* yahoo.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70F51C047F950059FB6F /* yahoo.png */; };
 		7194361C1BF0668100B9D921 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194361B1BF0668100B9D921 /* main.m */; };
 		7194361F1BF0668100B9D921 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194361E1BF0668100B9D921 /* AppDelegate.m */; };
 		719436211BF0668100B9D921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719436201BF0668100B9D921 /* Assets.xcassets */; };
@@ -44,7 +52,6 @@
 		7194367A1BF34E3900B9D921 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 719436771BF34E3900B9D921 /* bg@2x.png */; };
 		7194367B1BF34E3900B9D921 /* bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 719436781BF34E3900B9D921 /* bg@3x.png */; };
 		71C4C3D11C005406005C0B20 /* YWLeftPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C4C3CF1C005406005C0B20 /* YWLeftPanelViewController.m */; };
-		71C4C3D21C005406005C0B20 /* YWLeftPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C4C3D01C005406005C0B20 /* YWLeftPanelViewController.xib */; };
 		71C4C3D71C00549C005C0B20 /* YWCitySearchingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C4C3D51C00549C005C0B20 /* YWCitySearchingViewController.xib */; };
 		71C4C3DC1C0054D0005C0B20 /* YWLocationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C4C3DA1C0054D0005C0B20 /* YWLocationListViewController.xib */; };
 		71FBC1871C008E2D00A5E78D /* YWLocationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC1861C008E2D00A5E78D /* YWLocationListViewController.m */; };
@@ -63,6 +70,14 @@
 
 /* Begin PBXFileReference section */
 		37AFECAE69B5CB82D64A8F42 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		710A70E11C0291270059FB6F /* YWLeftPanelViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YWLeftPanelViewController.storyboard; sourceTree = "<group>"; };
+		710A70E41C0477210059FB6F /* location-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location-add.png"; sourceTree = "<group>"; };
+		710A70E51C0477210059FB6F /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		710A70ED1C047B6E0059FB6F /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		710A70EF1C047CA00059FB6F /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
+		710A70F11C047D400059FB6F /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		710A70F31C047D9C0059FB6F /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		710A70F51C047F950059FB6F /* yahoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yahoo.png; sourceTree = "<group>"; };
 		719436171BF0668100B9D921 /* YahooWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YahooWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7194361B1BF0668100B9D921 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7194361D1BF0668100B9D921 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,7 +122,6 @@
 		719436781BF34E3900B9D921 /* bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg@3x.png"; path = "../bg@3x.png"; sourceTree = "<group>"; };
 		71C4C3CE1C005406005C0B20 /* YWLeftPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWLeftPanelViewController.h; sourceTree = "<group>"; };
 		71C4C3CF1C005406005C0B20 /* YWLeftPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWLeftPanelViewController.m; sourceTree = "<group>"; };
-		71C4C3D01C005406005C0B20 /* YWLeftPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWLeftPanelViewController.xib; sourceTree = "<group>"; };
 		71C4C3D51C00549C005C0B20 /* YWCitySearchingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWCitySearchingViewController.xib; sourceTree = "<group>"; };
 		71C4C3DA1C0054D0005C0B20 /* YWLocationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWLocationListViewController.xib; sourceTree = "<group>"; };
 		71FBC1851C008E2D00A5E78D /* YWLocationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWLocationListViewController.h; sourceTree = "<group>"; };
@@ -190,7 +204,7 @@
 				7194366E1BF0BCA000B9D921 /* YWDailyForecast.m */,
 				71C4C3CE1C005406005C0B20 /* YWLeftPanelViewController.h */,
 				71C4C3CF1C005406005C0B20 /* YWLeftPanelViewController.m */,
-				71C4C3D01C005406005C0B20 /* YWLeftPanelViewController.xib */,
+				710A70E11C0291270059FB6F /* YWLeftPanelViewController.storyboard */,
 				719436671BF0BC5500B9D921 /* YWManager.h */,
 				719436681BF0BC5500B9D921 /* YWManager.m */,
 				71FBC1911C00E20C00A5E78D /* YWWeatherInfoCell.xib */,
@@ -214,6 +228,13 @@
 		7194362E1BF06ADF00B9D921 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				710A70F51C047F950059FB6F /* yahoo.png */,
+				710A70F31C047D9C0059FB6F /* star.png */,
+				710A70F11C047D400059FB6F /* share.png */,
+				710A70EF1C047CA00059FB6F /* chat.png */,
+				710A70ED1C047B6E0059FB6F /* gear.png */,
+				710A70E41C0477210059FB6F /* location-add.png */,
+				710A70E51C0477210059FB6F /* location.png */,
 				71FBC1A31C01190C00A5E78D /* Add@2x.png */,
 				71FBC1A41C01190C00A5E78D /* Add@3x.png */,
 				71FBC19F1C01164800A5E78D /* Menu@2x.png */,
@@ -341,15 +362,20 @@
 				71FBC1A51C01190C00A5E78D /* Add@2x.png in Resources */,
 				71FBC1A61C01190C00A5E78D /* Add@3x.png in Resources */,
 				7194367A1BF34E3900B9D921 /* bg@2x.png in Resources */,
-				71C4C3D21C005406005C0B20 /* YWLeftPanelViewController.xib in Resources */,
 				7194364E1BF06ADF00B9D921 /* weather-clear.png in Resources */,
+				710A70EE1C047B6E0059FB6F /* gear.png in Resources */,
+				710A70F41C047D9C0059FB6F /* star.png in Resources */,
 				7194365D1BF06ADF00B9D921 /* weather-scattered@2x.png in Resources */,
 				7194365B1BF06ADF00B9D921 /* weather-rain@2x.png in Resources */,
 				719436511BF06ADF00B9D921 /* weather-few-night@2x.png in Resources */,
 				719436541BF06ADF00B9D921 /* weather-mist.png in Resources */,
+				710A70E21C0291270059FB6F /* YWLeftPanelViewController.storyboard in Resources */,
 				719436601BF06ADF00B9D921 /* weather-snow.png in Resources */,
 				71C4C3D71C00549C005C0B20 /* YWCitySearchingViewController.xib in Resources */,
 				7194365A1BF06ADF00B9D921 /* weather-rain.png in Resources */,
+				710A70F61C047F950059FB6F /* yahoo.png in Resources */,
+				710A70F01C047CA00059FB6F /* chat.png in Resources */,
+				710A70F21C047D400059FB6F /* share.png in Resources */,
 				719436581BF06ADF00B9D921 /* weather-rain-night.png in Resources */,
 				719436211BF0668100B9D921 /* Assets.xcassets in Resources */,
 				719436571BF06ADF00B9D921 /* weather-moon@2x.png in Resources */,
@@ -358,7 +384,9 @@
 				719436551BF06ADF00B9D921 /* weather-mist@2x.png in Resources */,
 				719436621BF06ADF00B9D921 /* weather-tstorm.png in Resources */,
 				7194365E1BF06ADF00B9D921 /* weather-shower.png in Resources */,
+				710A70E91C0477210059FB6F /* location.png in Resources */,
 				719436561BF06ADF00B9D921 /* weather-moon.png in Resources */,
+				710A70E81C0477210059FB6F /* location-add.png in Resources */,
 				719436591BF06ADF00B9D921 /* weather-rain-night@2x.png in Resources */,
 				719436611BF06ADF00B9D921 /* weather-snow@2x.png in Resources */,
 				7194367B1BF34E3900B9D921 /* bg@3x.png in Resources */,
