@@ -7,10 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "YWCenterViewController.h"
+#import "YWMainViewController.h"
 #import <TSMessage.h>
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) YWMainViewController *viewController;
 
 @end
 
@@ -20,21 +22,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    YWCenterViewController *centerViewController = [[YWCenterViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:centerViewController];
+    YWMainViewController *mainViewController = [[YWMainViewController alloc] init];
     
-    // 设置导航条背景为透明
-    [navController.navigationBar setBackgroundImage:[UIImage new]
-                                      forBarMetrics:UIBarMetricsDefault];
-    navController.navigationBar.shadowImage = [UIImage new];
-    navController.navigationBar.translucent = YES;
+//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+//    
+//    // 设置导航条背景为透明
+//    [navController.navigationBar setBackgroundImage:[UIImage new]
+//                                      forBarMetrics:UIBarMetricsDefault];
+//    navController.navigationBar.shadowImage = [UIImage new];
+//    navController.navigationBar.translucent = YES;
+//    
+//    // 设置导航条标题
+//    [navController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+//                                                          NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:18]}];
+//    
+//    // 设置根视图控制器
+//    self.window.rootViewController = navController;
     
-    // 设置导航条标题
-    [navController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                          NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:18]}];
+    self.viewController = mainViewController;
+    self.window.rootViewController = self.viewController;
     
-    // 设置根视图控制器
-    self.window.rootViewController = navController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

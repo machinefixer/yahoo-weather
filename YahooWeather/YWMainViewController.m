@@ -28,7 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,10 +41,9 @@
 {
     // 设置中间的视图控制器
     self.centerViewController = [[YWCenterViewController alloc] init];
-    UIStoryboard *leftPanelViewControllerStoryboard = [UIStoryboard storyboardWithName:@"YWLeftPanelViewController"
-                                                                                bundle:nil];
-    // 设置左侧视图控制器
-    self.centerViewController = [leftPanelViewControllerStoryboard instantiateViewControllerWithIdentifier:@"leftPanel"];
+    self.centerViewController.view.tag = CENTER_TAG;
+    self.centerViewController.delegate = self;
+    
     [self.view addSubview:self.centerViewController.view];
     [self addChildViewController:self.centerViewController];
     
@@ -54,12 +54,13 @@
 {
     if (self.leftPanelViewController == nil) {
         // 载入左侧 panel
-        self.leftPanelViewController = [[YWLeftPanelViewController alloc] initWithNibName:@"LeftPanelViewController" bundle:nil];
+        UIStoryboard *leftPanelViewControllerStoryboard = [UIStoryboard storyboardWithName:@"YWLeftPanelViewController" bundle:nil];
+        self.leftPanelViewController = [leftPanelViewControllerStoryboard instantiateViewControllerWithIdentifier:@"leftPanelViewController"];
         self.leftPanelViewController.view.tag = LEFT_PANEL_TAG;
         
         [self.view addSubview:self.leftPanelViewController.view];
         [self addChildViewController:_leftPanelViewController];
-        [_leftPanelViewController didMoveToParentViewController:self];
+        [self.leftPanelViewController didMoveToParentViewController:self];
         
         self.leftPanelViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     }
@@ -112,13 +113,13 @@
                           delay:0
                         options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         _centerViewController.view.frame = CGRectMake(self.view.frame.size.width - PANEL_WIDTH,
+                         self.centerViewController.view.frame = CGRectMake(self.view.frame.size.width - PANEL_WIDTH,
                                                                        0,
                                                                        self.view.frame.size.width,
                                                                        self.view.frame.size.height);
                      }completion:^(BOOL finished) {
                          if (finished) {
-                             _centerViewController.navigationItem.leftBarButtonItem.tag = 0;
+                             self.centerViewController.navigationItem.leftBarButtonItem.tag = 0;
                          }
                      }];
 }
@@ -129,7 +130,7 @@
                           delay:0
                         options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         _centerViewController.view.frame = CGRectMake(0,
+                         self.centerViewController.view.frame = CGRectMake(0,
                                                                        0,
                                                                        self.view.frame.size.width,
                                                                        self.view.frame.size.height);
