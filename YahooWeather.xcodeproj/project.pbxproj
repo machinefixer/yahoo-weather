@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		710A70F91C04858C0059FB6F /* YWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710A70F81C04858C0059FB6F /* YWMainViewController.m */; };
+		713935601F540AF300FC32F5 /* YWAPIKeyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7139355F1F540AF300FC32F5 /* YWAPIKeyProvider.swift */; };
 		7194361C1BF0668100B9D921 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194361B1BF0668100B9D921 /* main.m */; };
 		7194361F1BF0668100B9D921 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194361E1BF0668100B9D921 /* AppDelegate.m */; };
 		719436211BF0668100B9D921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719436201BF0668100B9D921 /* Assets.xcassets */; };
@@ -55,6 +56,8 @@
 		0DC4533DD4843B14D305D67E /* Pods-YahooWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YahooWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YahooWeather/Pods-YahooWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		710A70F71C04858C0059FB6F /* YWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWMainViewController.h; sourceTree = "<group>"; };
 		710A70F81C04858C0059FB6F /* YWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWMainViewController.m; sourceTree = "<group>"; };
+		7139355E1F540AF200FC32F5 /* YahooWeather-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YahooWeather-Bridging-Header.h"; sourceTree = "<group>"; };
+		7139355F1F540AF300FC32F5 /* YWAPIKeyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YWAPIKeyProvider.swift; sourceTree = "<group>"; };
 		719436171BF0668100B9D921 /* YahooWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YahooWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7194361B1BF0668100B9D921 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7194361D1BF0668100B9D921 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -177,6 +180,7 @@
 		713935511F53F8AB00FC32F5 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				7139355D1F540A8300FC32F5 /* YWAPIKeyProvider */,
 				7139355A1F53FA2B00FC32F5 /* YWManager */,
 				713935521F53F8B600FC32F5 /* YWClient */,
 			);
@@ -263,6 +267,15 @@
 				719436681BF0BC5500B9D921 /* YWManager.m */,
 			);
 			name = YWManager;
+			sourceTree = "<group>";
+		};
+		7139355D1F540A8300FC32F5 /* YWAPIKeyProvider */ = {
+			isa = PBXGroup;
+			children = (
+				7139355F1F540AF300FC32F5 /* YWAPIKeyProvider.swift */,
+				7139355E1F540AF200FC32F5 /* YahooWeather-Bridging-Header.h */,
+			);
+			name = YWAPIKeyProvider;
 			sourceTree = "<group>";
 		};
 		7194360E1BF0668100B9D921 = {
@@ -390,6 +403,7 @@
 				TargetAttributes = {
 					719436161BF0668100B9D921 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -507,6 +521,7 @@
 				710A70F91C04858C0059FB6F /* YWMainViewController.m in Sources */,
 				71FBC1951C00F68100A5E78D /* YWWeatherInfoCell.m in Sources */,
 				7194366C1BF0BC7700B9D921 /* YWCondition.m in Sources */,
+				713935601F540AF300FC32F5 /* YWAPIKeyProvider.swift in Sources */,
 				71FBC1901C008E8000A5E78D /* YWCenterViewController.m in Sources */,
 				719436691BF0BC5500B9D921 /* YWManager.m in Sources */,
 				7194366F1BF0BCA000B9D921 /* YWDailyForecast.m in Sources */,
@@ -617,10 +632,14 @@
 			baseConfigurationReference = 0DC4533DD4843B14D305D67E /* Pods-YahooWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YahooWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuchenzhan.YahooWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YahooWeather/YahooWeather-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -629,10 +648,13 @@
 			baseConfigurationReference = E5F9FDE61E280F7EF918F373 /* Pods-YahooWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YahooWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuchenzhan.YahooWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YahooWeather/YahooWeather-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
