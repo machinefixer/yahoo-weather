@@ -32,11 +32,6 @@
     [self setupView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)setupView
 {
     // 设置中间的视图控制器

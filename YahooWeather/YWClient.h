@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
 #import <CoreLocation/CoreLocation.h>
 
 @interface YWClient : NSObject

@@ -7,15 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09526124A898D05257CBFC5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE0E258C76413BF96033385 /* libPods.a */; };
-		710A70E21C0291270059FB6F /* YWLeftPanelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 710A70E11C0291270059FB6F /* YWLeftPanelViewController.storyboard */; };
-		710A70E81C0477210059FB6F /* location-add.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70E41C0477210059FB6F /* location-add.png */; };
-		710A70E91C0477210059FB6F /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70E51C0477210059FB6F /* location.png */; };
-		710A70EE1C047B6E0059FB6F /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70ED1C047B6E0059FB6F /* gear.png */; };
-		710A70F01C047CA00059FB6F /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70EF1C047CA00059FB6F /* chat.png */; };
-		710A70F21C047D400059FB6F /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70F11C047D400059FB6F /* share.png */; };
-		710A70F41C047D9C0059FB6F /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70F31C047D9C0059FB6F /* star.png */; };
-		710A70F61C047F950059FB6F /* yahoo.png in Resources */ = {isa = PBXBuildFile; fileRef = 710A70F51C047F950059FB6F /* yahoo.png */; };
 		710A70F91C04858C0059FB6F /* YWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 710A70F81C04858C0059FB6F /* YWMainViewController.m */; };
 		7194361C1BF0668100B9D921 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194361B1BF0668100B9D921 /* main.m */; };
 		7194361F1BF0668100B9D921 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194361E1BF0668100B9D921 /* AppDelegate.m */; };
@@ -49,9 +40,6 @@
 		719436691BF0BC5500B9D921 /* YWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 719436681BF0BC5500B9D921 /* YWManager.m */; };
 		7194366C1BF0BC7700B9D921 /* YWCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194366B1BF0BC7700B9D921 /* YWCondition.m */; };
 		7194366F1BF0BCA000B9D921 /* YWDailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194366E1BF0BCA000B9D921 /* YWDailyForecast.m */; };
-		719436791BF34E3900B9D921 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 719436761BF34E3900B9D921 /* bg.png */; };
-		7194367A1BF34E3900B9D921 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 719436771BF34E3900B9D921 /* bg@2x.png */; };
-		7194367B1BF34E3900B9D921 /* bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 719436781BF34E3900B9D921 /* bg@3x.png */; };
 		71C4C3D11C005406005C0B20 /* YWLeftPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C4C3CF1C005406005C0B20 /* YWLeftPanelViewController.m */; };
 		71C4C3D71C00549C005C0B20 /* YWCitySearchingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C4C3D51C00549C005C0B20 /* YWCitySearchingViewController.xib */; };
 		71C4C3DC1C0054D0005C0B20 /* YWLocationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C4C3DA1C0054D0005C0B20 /* YWLocationListViewController.xib */; };
@@ -59,26 +47,12 @@
 		71FBC18A1C008E4C00A5E78D /* YWCitySearchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC1891C008E4C00A5E78D /* YWCitySearchingViewController.m */; };
 		71FBC18D1C008E6100A5E78D /* YWSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC18C1C008E6100A5E78D /* YWSettingsViewController.m */; };
 		71FBC1901C008E8000A5E78D /* YWCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC18F1C008E8000A5E78D /* YWCenterViewController.m */; };
-		71FBC1921C00E20C00A5E78D /* YWWeatherInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC1911C00E20C00A5E78D /* YWWeatherInfoCell.xib */; };
 		71FBC1951C00F68100A5E78D /* YWWeatherInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC1941C00F68100A5E78D /* YWWeatherInfoCell.m */; };
-		71FBC1991C00F7A400A5E78D /* YWWindAndPressureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FBC1971C00F7A400A5E78D /* YWWindAndPressureCell.m */; };
-		71FBC19A1C00F7A400A5E78D /* YWWindAndPressureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC1981C00F7A400A5E78D /* YWWindAndPressureCell.xib */; };
-		71FBC1A11C01164800A5E78D /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC19F1C01164800A5E78D /* Menu@2x.png */; };
-		71FBC1A21C01164800A5E78D /* Menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC1A01C01164800A5E78D /* Menu@3x.png */; };
-		71FBC1A51C01190C00A5E78D /* Add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC1A31C01190C00A5E78D /* Add@2x.png */; };
-		71FBC1A61C01190C00A5E78D /* Add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FBC1A41C01190C00A5E78D /* Add@3x.png */; };
+		F74EB531D6F8A52CCA8D5479 /* libPods-YahooWeather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB86D9D6F5E4E7E8F9E4F59 /* libPods-YahooWeather.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		37AFECAE69B5CB82D64A8F42 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		710A70E11C0291270059FB6F /* YWLeftPanelViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YWLeftPanelViewController.storyboard; sourceTree = "<group>"; };
-		710A70E41C0477210059FB6F /* location-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location-add.png"; sourceTree = "<group>"; };
-		710A70E51C0477210059FB6F /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
-		710A70ED1C047B6E0059FB6F /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
-		710A70EF1C047CA00059FB6F /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
-		710A70F11C047D400059FB6F /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
-		710A70F31C047D9C0059FB6F /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		710A70F51C047F950059FB6F /* yahoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yahoo.png; sourceTree = "<group>"; };
+		0DC4533DD4843B14D305D67E /* Pods-YahooWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YahooWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YahooWeather/Pods-YahooWeather.debug.xcconfig"; sourceTree = "<group>"; };
 		710A70F71C04858C0059FB6F /* YWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWMainViewController.h; sourceTree = "<group>"; };
 		710A70F81C04858C0059FB6F /* YWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWMainViewController.m; sourceTree = "<group>"; };
 		719436171BF0668100B9D921 /* YahooWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YahooWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,9 +94,6 @@
 		7194366B1BF0BC7700B9D921 /* YWCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCondition.m; sourceTree = "<group>"; };
 		7194366D1BF0BCA000B9D921 /* YWDailyForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWDailyForecast.h; sourceTree = "<group>"; };
 		7194366E1BF0BCA000B9D921 /* YWDailyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWDailyForecast.m; sourceTree = "<group>"; };
-		719436761BF34E3900B9D921 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../bg.png; sourceTree = "<group>"; };
-		719436771BF34E3900B9D921 /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg@2x.png"; path = "../bg@2x.png"; sourceTree = "<group>"; };
-		719436781BF34E3900B9D921 /* bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg@3x.png"; path = "../bg@3x.png"; sourceTree = "<group>"; };
 		71C4C3CE1C005406005C0B20 /* YWLeftPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWLeftPanelViewController.h; sourceTree = "<group>"; };
 		71C4C3CF1C005406005C0B20 /* YWLeftPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWLeftPanelViewController.m; sourceTree = "<group>"; };
 		71C4C3D51C00549C005C0B20 /* YWCitySearchingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWCitySearchingViewController.xib; sourceTree = "<group>"; };
@@ -135,18 +106,10 @@
 		71FBC18C1C008E6100A5E78D /* YWSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWSettingsViewController.m; sourceTree = "<group>"; };
 		71FBC18E1C008E8000A5E78D /* YWCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWCenterViewController.h; sourceTree = "<group>"; };
 		71FBC18F1C008E8000A5E78D /* YWCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWCenterViewController.m; sourceTree = "<group>"; };
-		71FBC1911C00E20C00A5E78D /* YWWeatherInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWWeatherInfoCell.xib; sourceTree = "<group>"; };
 		71FBC1931C00F68100A5E78D /* YWWeatherInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWWeatherInfoCell.h; sourceTree = "<group>"; };
 		71FBC1941C00F68100A5E78D /* YWWeatherInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWWeatherInfoCell.m; sourceTree = "<group>"; };
-		71FBC1961C00F7A400A5E78D /* YWWindAndPressureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWWindAndPressureCell.h; sourceTree = "<group>"; };
-		71FBC1971C00F7A400A5E78D /* YWWindAndPressureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWWindAndPressureCell.m; sourceTree = "<group>"; };
-		71FBC1981C00F7A400A5E78D /* YWWindAndPressureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YWWindAndPressureCell.xib; sourceTree = "<group>"; };
-		71FBC19F1C01164800A5E78D /* Menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@2x.png"; sourceTree = "<group>"; };
-		71FBC1A01C01164800A5E78D /* Menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@3x.png"; sourceTree = "<group>"; };
-		71FBC1A31C01190C00A5E78D /* Add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add@2x.png"; sourceTree = "<group>"; };
-		71FBC1A41C01190C00A5E78D /* Add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add@3x.png"; sourceTree = "<group>"; };
-		93D64F4DDCB23CFCEA0127B4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		EFE0E258C76413BF96033385 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FB86D9D6F5E4E7E8F9E4F59 /* libPods-YahooWeather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YahooWeather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5F9FDE61E280F7EF918F373 /* Pods-YahooWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YahooWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-YahooWeather/Pods-YahooWeather.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,20 +117,161 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09526124A898D05257CBFC5F /* libPods.a in Frameworks */,
+				F74EB531D6F8A52CCA8D5479 /* libPods-YahooWeather.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31749AABE2A04A56732273AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DC4533DD4843B14D305D67E /* Pods-YahooWeather.debug.xcconfig */,
+				E5F9FDE61E280F7EF918F373 /* Pods-YahooWeather.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7139354D1F53F4D200FC32F5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				713935591F53FA1000FC32F5 /* YWMainViewController */,
+				713935581F53F9E600FC32F5 /* YWLeftPanelViewController */,
+				713935561F53F99D00FC32F5 /* YWLocationListViewController */,
+				713935501F53F6B200FC32F5 /* YWWeatherInfoCell */,
+				7139354F1F53F68400FC32F5 /* YWSettingsViewController */,
+				7139354E1F53F65D00FC32F5 /* YWCitySearchingViewController */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		7139354E1F53F65D00FC32F5 /* YWCitySearchingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71FBC18F1C008E8000A5E78D /* YWCenterViewController.m */,
+				71C4C3D51C00549C005C0B20 /* YWCitySearchingViewController.xib */,
+				71FBC1881C008E4C00A5E78D /* YWCitySearchingViewController.h */,
+				71FBC1891C008E4C00A5E78D /* YWCitySearchingViewController.m */,
+			);
+			name = YWCitySearchingViewController;
+			sourceTree = "<group>";
+		};
+		7139354F1F53F68400FC32F5 /* YWSettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71FBC18B1C008E6100A5E78D /* YWSettingsViewController.h */,
+				71FBC18C1C008E6100A5E78D /* YWSettingsViewController.m */,
+				71FBC18E1C008E8000A5E78D /* YWCenterViewController.h */,
+			);
+			name = YWSettingsViewController;
+			sourceTree = "<group>";
+		};
+		713935501F53F6B200FC32F5 /* YWWeatherInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = YWWeatherInfoCell;
+			sourceTree = "<group>";
+		};
+		713935511F53F8AB00FC32F5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7139355A1F53FA2B00FC32F5 /* YWManager */,
+				713935521F53F8B600FC32F5 /* YWClient */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		713935521F53F8B600FC32F5 /* YWClient */ = {
+			isa = PBXGroup;
+			children = (
+				719436641BF0BC2900B9D921 /* YWClient.h */,
+				719436651BF0BC2900B9D921 /* YWClient.m */,
+			);
+			name = YWClient;
+			sourceTree = "<group>";
+		};
+		713935531F53F8C000FC32F5 /* YWCondition */ = {
+			isa = PBXGroup;
+			children = (
+				7194366A1BF0BC7700B9D921 /* YWCondition.h */,
+				7194366B1BF0BC7700B9D921 /* YWCondition.m */,
+			);
+			name = YWCondition;
+			sourceTree = "<group>";
+		};
+		713935541F53F8C900FC32F5 /* YWDailyForecast */ = {
+			isa = PBXGroup;
+			children = (
+				7194366D1BF0BCA000B9D921 /* YWDailyForecast.h */,
+				7194366E1BF0BCA000B9D921 /* YWDailyForecast.m */,
+			);
+			name = YWDailyForecast;
+			sourceTree = "<group>";
+		};
+		713935551F53F8E700FC32F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				713935541F53F8C900FC32F5 /* YWDailyForecast */,
+				713935531F53F8C000FC32F5 /* YWCondition */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		713935561F53F99D00FC32F5 /* YWLocationListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71C4C3DA1C0054D0005C0B20 /* YWLocationListViewController.xib */,
+				71FBC1851C008E2D00A5E78D /* YWLocationListViewController.h */,
+				71FBC1861C008E2D00A5E78D /* YWLocationListViewController.m */,
+			);
+			name = YWLocationListViewController;
+			sourceTree = "<group>";
+		};
+		713935571F53F9BC00FC32F5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7194361D1BF0668100B9D921 /* AppDelegate.h */,
+				7194361E1BF0668100B9D921 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		713935581F53F9E600FC32F5 /* YWLeftPanelViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71C4C3CE1C005406005C0B20 /* YWLeftPanelViewController.h */,
+				71C4C3CF1C005406005C0B20 /* YWLeftPanelViewController.m */,
+			);
+			name = YWLeftPanelViewController;
+			sourceTree = "<group>";
+		};
+		713935591F53FA1000FC32F5 /* YWMainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				710A70F71C04858C0059FB6F /* YWMainViewController.h */,
+				710A70F81C04858C0059FB6F /* YWMainViewController.m */,
+			);
+			name = YWMainViewController;
+			sourceTree = "<group>";
+		};
+		7139355A1F53FA2B00FC32F5 /* YWManager */ = {
+			isa = PBXGroup;
+			children = (
+				719436671BF0BC5500B9D921 /* YWManager.h */,
+				719436681BF0BC5500B9D921 /* YWManager.m */,
+			);
+			name = YWManager;
+			sourceTree = "<group>";
+		};
 		7194360E1BF0668100B9D921 = {
 			isa = PBXGroup;
 			children = (
 				719436191BF0668100B9D921 /* YahooWeather */,
 				719436181BF0668100B9D921 /* Products */,
-				ACB821FDB78F3E715C7CF339 /* Pods */,
-				EDC1EB0D3DD326B8E6D175B2 /* Frameworks */,
+				31749AABE2A04A56732273AB /* Pods */,
+				AA007EB7A7497F15B8313A06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,41 +286,16 @@
 		719436191BF0668100B9D921 /* YahooWeather */ = {
 			isa = PBXGroup;
 			children = (
-				7194361D1BF0668100B9D921 /* AppDelegate.h */,
-				7194361E1BF0668100B9D921 /* AppDelegate.m */,
+				713935571F53F9BC00FC32F5 /* AppDelegate */,
+				713935551F53F8E700FC32F5 /* Model */,
+				713935511F53F8AB00FC32F5 /* Util */,
+				7139354D1F53F4D200FC32F5 /* UI */,
 				719436201BF0668100B9D921 /* Assets.xcassets */,
-				71C4C3D51C00549C005C0B20 /* YWCitySearchingViewController.xib */,
-				71FBC1881C008E4C00A5E78D /* YWCitySearchingViewController.h */,
-				71FBC1891C008E4C00A5E78D /* YWCitySearchingViewController.m */,
-				71FBC18B1C008E6100A5E78D /* YWSettingsViewController.h */,
-				71FBC18C1C008E6100A5E78D /* YWSettingsViewController.m */,
-				71FBC18E1C008E8000A5E78D /* YWCenterViewController.h */,
-				71FBC18F1C008E8000A5E78D /* YWCenterViewController.m */,
 				7194362E1BF06ADF00B9D921 /* Images */,
 				719436251BF0668100B9D921 /* Info.plist */,
 				719436221BF0668100B9D921 /* LaunchScreen.storyboard */,
-				71C4C3DA1C0054D0005C0B20 /* YWLocationListViewController.xib */,
-				71FBC1851C008E2D00A5E78D /* YWLocationListViewController.h */,
-				710A70F71C04858C0059FB6F /* YWMainViewController.h */,
-				710A70F81C04858C0059FB6F /* YWMainViewController.m */,
-				71FBC1861C008E2D00A5E78D /* YWLocationListViewController.m */,
 				7194361A1BF0668100B9D921 /* Supporting Files */,
-				719436641BF0BC2900B9D921 /* YWClient.h */,
-				719436651BF0BC2900B9D921 /* YWClient.m */,
-				7194366A1BF0BC7700B9D921 /* YWCondition.h */,
-				7194366B1BF0BC7700B9D921 /* YWCondition.m */,
-				7194366D1BF0BCA000B9D921 /* YWDailyForecast.h */,
-				7194366E1BF0BCA000B9D921 /* YWDailyForecast.m */,
-				71C4C3CE1C005406005C0B20 /* YWLeftPanelViewController.h */,
-				71C4C3CF1C005406005C0B20 /* YWLeftPanelViewController.m */,
-				710A70E11C0291270059FB6F /* YWLeftPanelViewController.storyboard */,
-				719436671BF0BC5500B9D921 /* YWManager.h */,
-				719436681BF0BC5500B9D921 /* YWManager.m */,
-				71FBC1911C00E20C00A5E78D /* YWWeatherInfoCell.xib */,
 				71FBC1931C00F68100A5E78D /* YWWeatherInfoCell.h */,
-				71FBC1961C00F7A400A5E78D /* YWWindAndPressureCell.h */,
-				71FBC1971C00F7A400A5E78D /* YWWindAndPressureCell.m */,
-				71FBC1981C00F7A400A5E78D /* YWWindAndPressureCell.xib */,
 				71FBC1941C00F68100A5E78D /* YWWeatherInfoCell.m */,
 			);
 			path = YahooWeather;
@@ -233,20 +312,6 @@
 		7194362E1BF06ADF00B9D921 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				710A70F51C047F950059FB6F /* yahoo.png */,
-				710A70F31C047D9C0059FB6F /* star.png */,
-				710A70F11C047D400059FB6F /* share.png */,
-				710A70EF1C047CA00059FB6F /* chat.png */,
-				710A70ED1C047B6E0059FB6F /* gear.png */,
-				710A70E41C0477210059FB6F /* location-add.png */,
-				710A70E51C0477210059FB6F /* location.png */,
-				71FBC1A31C01190C00A5E78D /* Add@2x.png */,
-				71FBC1A41C01190C00A5E78D /* Add@3x.png */,
-				71FBC19F1C01164800A5E78D /* Menu@2x.png */,
-				71FBC1A01C01164800A5E78D /* Menu@3x.png */,
-				719436761BF34E3900B9D921 /* bg.png */,
-				719436771BF34E3900B9D921 /* bg@2x.png */,
-				719436781BF34E3900B9D921 /* bg@3x.png */,
 				719436311BF06ADF00B9D921 /* Weather Icons */,
 			);
 			path = Images;
@@ -283,19 +348,10 @@
 			path = "Weather Icons";
 			sourceTree = "<group>";
 		};
-		ACB821FDB78F3E715C7CF339 /* Pods */ = {
+		AA007EB7A7497F15B8313A06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				37AFECAE69B5CB82D64A8F42 /* Pods.debug.xcconfig */,
-				93D64F4DDCB23CFCEA0127B4 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		EDC1EB0D3DD326B8E6D175B2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EFE0E258C76413BF96033385 /* libPods.a */,
+				7FB86D9D6F5E4E7E8F9E4F59 /* libPods-YahooWeather.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,12 +363,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 719436281BF0668100B9D921 /* Build configuration list for PBXNativeTarget "YahooWeather" */;
 			buildPhases = (
-				B9F355650DD4570DCD009804 /* Check Pods Manifest.lock */,
+				099A871E489EA726189532BC /* [CP] Check Pods Manifest.lock */,
 				719436131BF0668100B9D921 /* Sources */,
 				719436141BF0668100B9D921 /* Frameworks */,
 				719436151BF0668100B9D921 /* Resources */,
-				7049891EADD8AC3C49F792A3 /* Embed Pods Frameworks */,
-				6B08AAF32E8DEFFEFC13388F /* Copy Pods Resources */,
+				1A0467FAD70F8FE6FC390E90 /* [CP] Embed Pods Frameworks */,
+				D5693A5706FA5CFA9173099D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -364,46 +420,29 @@
 				7194364C1BF06ADF00B9D921 /* weather-broken.png in Resources */,
 				719436501BF06ADF00B9D921 /* weather-few-night.png in Resources */,
 				71C4C3DC1C0054D0005C0B20 /* YWLocationListViewController.xib in Resources */,
-				71FBC1A51C01190C00A5E78D /* Add@2x.png in Resources */,
-				71FBC1A61C01190C00A5E78D /* Add@3x.png in Resources */,
-				7194367A1BF34E3900B9D921 /* bg@2x.png in Resources */,
 				7194364E1BF06ADF00B9D921 /* weather-clear.png in Resources */,
-				710A70EE1C047B6E0059FB6F /* gear.png in Resources */,
-				710A70F41C047D9C0059FB6F /* star.png in Resources */,
 				7194365D1BF06ADF00B9D921 /* weather-scattered@2x.png in Resources */,
 				7194365B1BF06ADF00B9D921 /* weather-rain@2x.png in Resources */,
 				719436511BF06ADF00B9D921 /* weather-few-night@2x.png in Resources */,
 				719436541BF06ADF00B9D921 /* weather-mist.png in Resources */,
-				710A70E21C0291270059FB6F /* YWLeftPanelViewController.storyboard in Resources */,
 				719436601BF06ADF00B9D921 /* weather-snow.png in Resources */,
 				71C4C3D71C00549C005C0B20 /* YWCitySearchingViewController.xib in Resources */,
 				7194365A1BF06ADF00B9D921 /* weather-rain.png in Resources */,
-				710A70F61C047F950059FB6F /* yahoo.png in Resources */,
-				710A70F01C047CA00059FB6F /* chat.png in Resources */,
-				710A70F21C047D400059FB6F /* share.png in Resources */,
 				719436581BF06ADF00B9D921 /* weather-rain-night.png in Resources */,
 				719436211BF0668100B9D921 /* Assets.xcassets in Resources */,
 				719436571BF06ADF00B9D921 /* weather-moon@2x.png in Resources */,
-				71FBC1921C00E20C00A5E78D /* YWWeatherInfoCell.xib in Resources */,
-				71FBC19A1C00F7A400A5E78D /* YWWindAndPressureCell.xib in Resources */,
 				719436551BF06ADF00B9D921 /* weather-mist@2x.png in Resources */,
 				719436621BF06ADF00B9D921 /* weather-tstorm.png in Resources */,
 				7194365E1BF06ADF00B9D921 /* weather-shower.png in Resources */,
-				710A70E91C0477210059FB6F /* location.png in Resources */,
 				719436561BF06ADF00B9D921 /* weather-moon.png in Resources */,
-				710A70E81C0477210059FB6F /* location-add.png in Resources */,
 				719436591BF06ADF00B9D921 /* weather-rain-night@2x.png in Resources */,
 				719436611BF06ADF00B9D921 /* weather-snow@2x.png in Resources */,
-				7194367B1BF34E3900B9D921 /* bg@3x.png in Resources */,
 				7194365F1BF06ADF00B9D921 /* weather-shower@2x.png in Resources */,
-				719436791BF34E3900B9D921 /* bg.png in Resources */,
 				719436521BF06ADF00B9D921 /* weather-few.png in Resources */,
 				719436531BF06ADF00B9D921 /* weather-few@2x.png in Resources */,
 				7194364D1BF06ADF00B9D921 /* weather-broken@2x.png in Resources */,
 				719436241BF0668100B9D921 /* LaunchScreen.storyboard in Resources */,
 				7194365C1BF06ADF00B9D921 /* weather-scattered.png in Resources */,
-				71FBC1A11C01164800A5E78D /* Menu@2x.png in Resources */,
-				71FBC1A21C01164800A5E78D /* Menu@3x.png in Resources */,
 				7194364F1BF06ADF00B9D921 /* weather-clear@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,49 +450,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6B08AAF32E8DEFFEFC13388F /* Copy Pods Resources */ = {
+		099A871E489EA726189532BC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7049891EADD8AC3C49F792A3 /* Embed Pods Frameworks */ = {
+		1A0467FAD70F8FE6FC390E90 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YahooWeather/Pods-YahooWeather-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B9F355650DD4570DCD009804 /* Check Pods Manifest.lock */ = {
+		D5693A5706FA5CFA9173099D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YahooWeather/Pods-YahooWeather-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -464,7 +503,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				71C4C3D11C005406005C0B20 /* YWLeftPanelViewController.m in Sources */,
-				71FBC1991C00F7A400A5E78D /* YWWindAndPressureCell.m in Sources */,
 				719436661BF0BC2900B9D921 /* YWClient.m in Sources */,
 				710A70F91C04858C0059FB6F /* YWMainViewController.m in Sources */,
 				71FBC1951C00F68100A5E78D /* YWWeatherInfoCell.m in Sources */,
@@ -576,7 +614,7 @@
 		};
 		719436291BF0668100B9D921 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37AFECAE69B5CB82D64A8F42 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 0DC4533DD4843B14D305D67E /* Pods-YahooWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YahooWeather/Info.plist;
@@ -588,7 +626,7 @@
 		};
 		7194362A1BF0668100B9D921 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93D64F4DDCB23CFCEA0127B4 /* Pods.release.xcconfig */;
+			baseConfigurationReference = E5F9FDE61E280F7EF918F373 /* Pods-YahooWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YahooWeather/Info.plist;
