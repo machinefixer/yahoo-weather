@@ -6,7 +6,6 @@
 //  Copyright © 2015年 Yuchen Zhan. All rights reserved.
 //
 
-#import <Mantle/Mantle.h>
 
 @interface YWCondition : MTLModel <MTLJSONSerializing>
 
