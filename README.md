@@ -1,6 +1,8 @@
-# yahoo-weather
+# yahoo-weather (In-Progress)
 
-A clone of Yahoo Weather iOS APP
+A clone of Yahoo Weather iOS App
+
+
 
 ### Requirements
 
@@ -15,10 +17,29 @@ A clone of Yahoo Weather iOS APP
 * Add your [OpenWeatherMap](http://openweathermap.org) API Key to the file `api_key`, place your key file in project root directory.
 * Build and Run
 
-### Screenshot:
+```
+Part of images and icons in this clone are extract from the original "Yahoo Weather!.ipa" file, you are on your own risk for commercial usage of these images.
+```
 
-![alt screenshot-1](./screenshots/screenshot-1.png)
-![alt screenshot-2](./screenshots/screenshot-2.png)
+### Feature Implementation Checklist
+
+- [ ] display weather condition of next 24 hours (horizontal scroll view)
+- [ ] display weather condition of next 5/10 days
+- [ ] display chart of humidity of next 90 minutes
+- [ ] rain section
+- [ ] wind and pressure section
+- [ ] sun rise and sun set section
+- [ ] commercial section
+- [ ] side menu 
+- [ ] city management
+- [ ] settings
+- [ ] animation effect
+- [ ] dynamic wallpaper that chang with city switching
+
+
+
+### Screenshot
+
 
 ### License
 
